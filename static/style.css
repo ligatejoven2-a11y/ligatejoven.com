@@ -3,27 +3,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
     scroll-behavior: smooth;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: #0f172a;
-    color: white;
+    background: #0b1120;
+    color: #ffffff;
+    line-height: 1.7;
 }
 
-nav {
+header {
+    background: #111c32;
+    padding: 20px 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 8%;
-    background: #111827;
+    flex-wrap: wrap;
 }
 
-nav h2 {
+header h2 {
     color: #38bdf8;
 }
 
@@ -37,191 +36,91 @@ nav a:hover {
     color: #38bdf8;
 }
 
-.hero {
-    text-align: center;
-    padding: 130px 20px;
-    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+section {
+    padding: 70px 8%;
 }
 
-.hero h1 {
-    font-size: 55px;
-    margin: 20px;
-    color: #38bdf8;
-}
-
-.hero h3 {
-    margin-bottom: 20px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 14px 28px;
-    background: #38bdf8;
-    color: #0f172a;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-section:not(.hero) {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-section h2 {
-    color: #38bdf8;
-    margin-bottom: 25px;
-    font-size: 32px;
-}
-
-.project {
-    background: #1e293b;
-    padding: 30px;
-    max-width: 500px;
-    margin: auto;
-    border-radius: 12px;
-}
-
-footer {
-    background: #111827;
-    text-align: center;
-    padding: 25px;
-}
-	.profile {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #38bdf8;
-    margin-bottom: 20px;
-}
-	
-.hero {
-    animation: fadeIn 1.5s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.btn {
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.08);
-    background: white;
-}
-
-.project {
-    transition: 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-8px);
-}
-	
-.projects-container {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.project {
-    width: 280px;
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-}
-
-.project h3 {
-    color: #38bdf8;
-    margin-bottom: 15px;
-}
-
-.project p {
-    margin-bottom: 20px;
-}
-
-.project span {
-    color: #38bdf8;
-    font-weight: bold;
-}
-	
-.skill {
-    max-width: 500px;
-    margin: 25px auto;
-    text-align: left;
-}
-
-.skill p {
-    margin-bottom: 10px;
-}
-
-.progress {
-    background: #334155;
-    height: 12px;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.bar {
-    height: 100%;
-    background: #38bdf8;
-    border-radius: 20px;
-}
-
-.html {
-    width: 70%;
-}
-
-.css {
-    width: 50%;
-}
-
-.python {
-    width: 30%;
-}
-	
-.contact-form {
-    max-width: 500px;
-    margin: auto;
+#home {
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 48px;
+    color: #38bdf8;
+}
+
+#home p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+h2 {
+    color: #38bdf8;
+    margin-bottom: 20px;
+}
+
+#about, #skills, #projects, #contact {
+    background: #111c32;
+    margin: 20px 8%;
+    border-radius: 15px;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 15px;
-    border: 1px solid #334155;
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
     border-radius: 8px;
-    background: #1e293b;
-    color: white;
-    font-size: 16px;
-}
-
-.contact-form textarea {
-    height: 150px;
-    resize: vertical;
 }
 
 .contact-form button {
-    padding: 15px;
     background: #38bdf8;
+    color: #0b1120;
+    padding: 12px 25px;
     border: none;
     border-radius: 8px;
-    font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background: #0ea5e9;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+@media (max-width: 600px) {
+    #home h1 {
+        font-size: 32px;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px;
+    }
 }
