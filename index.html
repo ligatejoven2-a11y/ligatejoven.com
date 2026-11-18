@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligate Joven | Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h2>Ligate.</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home">
+    <h1>I'm Ligate Joven</h1>
+    <p>Future Software Developer</p>
+    <p>Welcome to my personal portfolio website.</p>
+    <a href="#projects" class="hero-btn">Explore My Work</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Ligate Joven" width="150">
+    <p>I am a passionate beginner in software development.
+       I enjoy learning Python, web development and technology.</p>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <p>HTML</p>
+    <p>CSS</p>
+    <p>Python</p>
+    <p>Flask</p>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-card">
+        <h3>Personal Portfolio</h3>
+        <p>A website built using Python and Flask.</p>
+    </div>
+    <div class="project-card">
+        <h3>Web Development</h3>
+        <p>Learning to create modern websites.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form action="/contact" method="POST" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Ligate Joven. All Rights Reserved.</p>
+</footer>
+
+<a href="https://wa.me/255685666897"
+   class="whatsapp-btn"
+   target="_blank">
+   Chat with me on WhatsApp
+</a>
+
+</body>
+</html>
